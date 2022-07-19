@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My blog</title>
+    <link rel="stylesheet" href="./dipak.css" />
+    <script src="dipak.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="base">
+                <div class="enter">
+                    <h4>Age calculater</h4>
+                </div>
+                <h1>Enter your birthdate => </h1>
+                <div class="block">
+                    <p class="title">Date</p>
+                    <input type="text" name="date" id="Date" placeholder="date" required="required" minlength="1" maxlength="2" />
+                </div>
+                <div class="block">
+                    <p class="title">Month</p>
+                    <input type="text" name="month" id="Month" placeholder="month" required="required" minlength="1" maxlength="2" />
+                </div>
+                <div class="block">
+                    <p class="title">year</p>
+                    <input type="text" name="year" id="Year" placeholder="year" required="required" minlength="4" maxlength="4" />
+                </div>
+            </div>
+            <div class="base">
+                <input type="button" name="submit" value="submit" onclick="age()" />
+            </div>
+            <div class="age" id="age"></div>
+        </form>
+    </div>
+    <!-- <script>
+        function age() {
+            var d1 = document.querySelector('#Date').value;
+            var m1 = document.querySelector('#Month').value;
+            var y1 = document.querySelector('#Year').value;
+            var date = new Date();
+            var d2 = date.getDate();
+            var m2 = 1 + date.getMonth();
+            var y2 = date.getFullYear();
+            var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            if (d1 > d2) {
+                d2 = d2 + month[m2 - 1];
+                m2 = m2 - 1;
+            }
+            if (m1 > m2) {
+                m2 = m2 + 12;
+                y2 = y2 - 1;
+
+            }
+            var d = d2 - d1;
+            var m = m2 - m1;
+            var y = y2 - y1;
+            document.querySelector("#age").innerHTML = 'your Age is' + "" + y + 'year' + "" + m + 'Month' + "" + d + 'Days';
+        }
+    </script> -->
+</body>
+
+</html>
